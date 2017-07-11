@@ -32,6 +32,13 @@ module.exports = function(gulp, plugins, config, name, file) { // eslint-disable
     dest.push(config.projectPath + theme.dest + '/' + locale);
   });
 
+  // Gene Edit
+  if (config.finalTheme && production) {
+    dest.push(config.projectPath + theme.src + '/web');
+    console.log("Moving Compiled CSS to " + name + " web/css directory");
+  }
+  // end Gene Edit
+
   return gulp.src(
     file || srcBase + '/**/*.scss',
     { base: srcBase }

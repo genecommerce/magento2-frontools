@@ -14,6 +14,13 @@ module.exports = function() { // eslint-disable-line func-names
 
   // Loop through themes to compile scss or less depending on your config.json
   themes.forEach(name => {
+
+    // Gene Edit
+    if(name === themes[2] ){
+      config.finalTheme = true;
+    }
+    // end Gene Edit
+
     streams.add(require('../helper/scss')(gulp, plugins, config, name));
   });
 
