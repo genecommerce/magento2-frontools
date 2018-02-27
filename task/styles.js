@@ -16,7 +16,7 @@ module.exports = function() { // eslint-disable-line func-names
   themes.forEach(name => {
 
     // Gene Edit
-    if(name === themes[2] ){
+    if(name === themes[1] ){
       config.finalTheme = true;
     }
     // end Gene Edit
